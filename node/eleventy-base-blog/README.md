@@ -17,14 +17,14 @@ A starter repository showing how to build a blog with the [Eleventy](https://git
 ### 1. Configure kn
 
 ```
-kn repo add https://github.com/no9/kn-templates
+kn func repository add no9 https://github.com/no9/kn-templates
 ```
 
 
 ### 2. Create a site
 
 ```
-kn func create --repository no9 --language jam --template eleventy-base-blog
+kn func create mysite --language node --template no9/eleventy-base-blog
 ```
 
 Specifically have a look at `.eleventy.js` to see if you want to configure any Eleventy options differently.
@@ -32,6 +32,7 @@ Specifically have a look at `.eleventy.js` to see if you want to configure any E
 ### 3. Install dependencies
 
 ```
+cd mysite
 npm install
 ```
 
